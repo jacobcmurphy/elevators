@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require_relative 'building'
 require_relative 'floor'
 require_relative 'elevator'
@@ -43,7 +45,6 @@ building = Building.new(elevators: elevators, floors: floors)
 
 sim = Simulation.new building
 
-sim.register building
 elevators.each do |elev|
   sim.register elev
 end

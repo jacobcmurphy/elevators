@@ -1,7 +1,7 @@
 class Simulation
   def initialize(building)
     @building = building
-    @registered_items = []
+    @registered_items = [@building]
   end
 
   def register(obj)

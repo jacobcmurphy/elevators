@@ -29,11 +29,3 @@ describe "service" do
 		end
   end
 end
-# DO THIS
-
-# AND THEN DO THE BELOW:
-
-# A readme file which describes your solution and any interesting design concepts you applied
-# All checked into github
-# Run the github repo through code climate and add a badge to your readme showing the rating
-# Post the url of the github repo to Latte

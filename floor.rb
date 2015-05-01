@@ -1,5 +1,4 @@
 class Floor
-  attr_accessor :rider_queue
   attr_reader :floor_level
 
   def initialize(floor_level, queue = [])

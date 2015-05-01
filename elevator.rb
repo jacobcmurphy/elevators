@@ -1,5 +1,5 @@
 class Elevator
-  attr_accessor :going_up, :current_floor, :stops
+  attr_accessor :going_up, :current_floor
   BOTTOM_FLOOR = 0
   ELEV_MAX_PERSONS = 5
   ELEV_RESTING_FLOOR = 0
@@ -31,7 +31,7 @@ class Elevator
     end
 
     # counteract the move command for changing floors if already here
-    @current_floor += @going_up ? -1 : 1 if @current_floor == ELEV_RESTING_FLOOR
+    @current_floor += directed_move*-1 if @current_floor == ELEV_RESTING_FLOOR
   end
 
   def full?
@@ -47,11 +47,9 @@ class Elevator
   end
 
   def ride(rider)
-    if full?
-      return false
-    else
-      @stops[rider.destination] << rider
-    end
+    return false if full?
+
+    @stops[rider.destination] << rider
     true
   end
 
