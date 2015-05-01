@@ -28,7 +28,7 @@ In elevator.rb
 
 Elevator Logic Design
 =====================
-My approach believes that a Building and its ElevatorController
+My approach believes that a Building the ElevatorController it creates
 should control the logic of how the elevators move. This allows
 for more intelligent direction decisions since elevators are
 not operating entirely independently. The general idea of the
@@ -64,3 +64,10 @@ the floor they currently are at.
 * The direction of all empty elevators is decided and they are loaded.
 * All elevators move in their required directions.
 * All elevators are unloaded
+
+The script that setups up and runs the program is _sim.rb_.
+The script makes all the people and places them on floors.
+Then it makes Elevators and tells each elevator how many floors
+the Building will have. Then a Building gets made with the
+floors and elevators. Once everything is created and connected,
+the script runs the simulation for the specified amount of steps.
