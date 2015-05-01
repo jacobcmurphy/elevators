@@ -2,29 +2,29 @@
 
 Contact
 =======
-Jacob Murphy
+Jacob Murphy  
 jcmurphy@brandeis.edu
 
 Simulation Usage
 ==================
-To run, type: ruby sim.rb
+To run, type: *ruby sim.rb*
 
-To change simulation variables:
-  In sim.rb
-    NUM_OF_FLOORS = 4
-      the number of floors in the building
-    MAX_PEOPLE_PER_FLOOR = 5
-      the most people that can wait for an elevator on one floor
-    NUM_OF_ELEVATORS = 2
-      the number of elevators in the building
-    NUM_OF_TICKS = 5
-      the number of turns in the simulation
+To change simulation variables:  
+In sim.rb
+  * NUM_OF_FLOORS = 4
+    - the number of floors in the building
+  * MAX_PEOPLE_PER_FLOOR = 5
+    - the most people that can wait for an elevator on one floor
+  * NUM_OF_ELEVATORS = 2
+    - the number of elevators in the building
+  * NUM_OF_TICKS = 5
+    - the number of turns in the simulation
 
-  In elevator.rb
-    ELEV_MAX_PERSONS = 5
-      the maximum capacity of an elevator
-    ELEV_RESTING_FLOOR = 0
-      the floor that elevators wait at when unneeded
+In elevator.rb
+  * ELEV_MAX_PERSONS = 5
+    - the maximum capacity of an elevator
+  * ELEV_RESTING_FLOOR = 0
+    - the floor that elevators wait at when unneeded
 
 Elevator Logic Design
 =====================
@@ -58,7 +58,7 @@ registered (and thus told to act for each tick) due to its
 importance in elevator motion logic. The Floors do not need
 registration since they react when an elevator arrives.
 
-The flow of events for each simulated moment is
+The flow of events for each simulated moment is:
 * All partially occupied elevators are loaded with people from
 the floor they currently are at.
 * The direction of all empty elevators is decided and they are loaded.
